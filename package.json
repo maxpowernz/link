@@ -8,11 +8,17 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "latest",
     "eslint-config-custom": "workspace:*",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "latest"
+    "prettier": "^2.8.7",
+    "turbo": "^1.8.8"
   },
-  "packageManager": "pnpm@7.15.0"
+  "packageManager": "pnpm@8.0.0",
+  "pnpm": {
+    "overrides": {
+      "trim@<0.0.3": ">=0.0.3",
+      "glob-parent@<5.1.2": ">=5.1.2",
+      "trim-newlines@<3.0.1": ">=3.0.1"
+    }
+  }
 }

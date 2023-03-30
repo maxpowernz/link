@@ -1,0 +1,58 @@
+<component name="libraryTable">
+  <library name="ts-external-references" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@types+chai@4.3.4/node_modules/@types/chai/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+expect@0.29.8/node_modules/@vitest/expect/dist/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/runner-b9659804.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/tasks-3fbb29e4.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/types.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/utils.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/types.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/utils.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+spy@0.29.8/node_modules/@vitest/spy/dist/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+utils@0.29.8/node_modules/@vitest/utils/dist/helpers.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+utils@0.29.8/node_modules/@vitest/utils/dist/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+utils@0.29.8/node_modules/@vitest/utils/dist/types.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/pretty-format@27.5.1/node_modules/pretty-format/build/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/pretty-format@27.5.1/node_modules/pretty-format/build/types.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/source-map@0.6.1/node_modules/source-map/source-map.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/tinybench@2.4.0/node_modules/tinybench/dist/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/tinyspy@1.1.1/node_modules/tinyspy/dist/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/vite-node@0.29.8_@types+node@18.15.11/node_modules/vite-node/dist/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/@types/node/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/esbuild/lib/main.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/postcss/lib/postcss.d.ts" />
+        <item url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/rollup/dist/rollup.d.ts" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@types+chai@4.3.4/node_modules/@types/chai/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+expect@0.29.8/node_modules/@vitest/expect/dist/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/runner-b9659804.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/tasks-3fbb29e4.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/types.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/dist/utils.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/types.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+runner@0.29.8/node_modules/@vitest/runner/utils.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+spy@0.29.8/node_modules/@vitest/spy/dist/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+utils@0.29.8/node_modules/@vitest/utils/dist/helpers.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+utils@0.29.8/node_modules/@vitest/utils/dist/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/@vitest+utils@0.29.8/node_modules/@vitest/utils/dist/types.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/pretty-format@27.5.1/node_modules/pretty-format/build/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/pretty-format@27.5.1/node_modules/pretty-format/build/types.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/source-map@0.6.1/node_modules/source-map/source-map.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/tinybench@2.4.0/node_modules/tinybench/dist/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/tinyspy@1.1.1/node_modules/tinyspy/dist/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/vite-node@0.29.8_@types+node@18.15.11/node_modules/vite-node/dist/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/@types/node/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/esbuild/lib/main.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/postcss/lib/postcss.d.ts" />
+      <root url="file://$PROJECT_DIR$/node_modules/.pnpm/vite@4.2.1_@types+node@18.15.11/node_modules/rollup/dist/rollup.d.ts" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

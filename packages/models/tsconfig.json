@@ -1,0 +1,9 @@
+//{
+//  "extends": "tsconfig/react-library.json",
+//  "compilerOptions": {
+//    "types": ["vitest/globals", "node", "vitest", "jest", "vitest/importMeta", "@testing-library/jest-dom"],
+//    "lib": ["ESNext", "DOM", "DOM.Iterable"]
+//  },
+//  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "vitest.config.ts"],
+//  "exclude": ["dist", "build", "node_modules"]
+//}

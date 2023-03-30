@@ -4,6 +4,10 @@
   "private": true,
   "main": "index.js",
   "devDependencies": {
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.3.0"
+  },
+  "dependencies": {
+    "daisyui": "^2.51.5",
+    "react-daisyui": "^3.0.3"
   }
 }
