@@ -39,6 +39,8 @@ jobs:
       
       - name: Zip App
         run: zip next.zip ./* .next .env -qr
+        working-directory: ${{ env.APP_PACKAGE_PATH }}
+        
 
 # skip uploading artifact if you don't need it
       # - name: Upload artifact for deployment job
