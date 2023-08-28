@@ -34,7 +34,7 @@ jobs:
       - name: pnpm install, build
         run: |
           pnpm install
-          pnpm run build
+          pnpm run build-link-app
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
