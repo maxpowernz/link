@@ -20,6 +20,8 @@
       "cache": false
     },
     "test": {
+    },
+    "start-link":{      
     }
   }
 }
