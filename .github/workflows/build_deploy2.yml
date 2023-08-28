@@ -5,7 +5,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: linkaaron2
-  AZURE_WEBAPP_PACKAGE_PATH: 'apps/web'
+  AZURE_WEBAPP_PACKAGE_PATH: './apps/web'
   NODE_VERSION: '18.x'
 
 jobs:
@@ -31,6 +31,7 @@ jobs:
         run: |
           pnpm install
           pnpm build-link
+        working-directory: ./apps/web          
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
