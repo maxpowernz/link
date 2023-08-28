@@ -6,7 +6,6 @@ on:
 env:
   AZURE_WEBAPP_NAME: linkaaron2
   AZURE_WEBAPP_PACKAGE_PATH: 'apps/web'
-  NEXT_BUILD_PATH: 'apps/web'
   NODE_VERSION: '18.x'
 
 jobs:
@@ -34,7 +33,7 @@ jobs:
         run: |
           pnpm install
           pnpm run build
-        working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        # working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
