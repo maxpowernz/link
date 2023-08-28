@@ -37,9 +37,8 @@ jobs:
           pnpm run build
         working-directory: ${{ env.APP_PACKAGE_PATH }}
 
-      - name: Zip all files, .next is a hidden folder
-        run: |
-          zip ${{ env.NEXT_ZIP_FILE }} ./* .next -qr
+      # - name: Zip all files
+      #   run: zip ${{ env.NEXT_ZIP_FILE }} ./* .next -qr
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -69,6 +68,6 @@ jobs:
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ${{ env.NEXT_ZIP_FILE }}
       
-      - name: Delete Zip File
-        run: |
-          rm ${{ env.NEXT_ZIP_FILE }}
+      # - name: Delete Zip File
+      #   run: |
+      #     rm ${{ env.NEXT_ZIP_FILE }}
