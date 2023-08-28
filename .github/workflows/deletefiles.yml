@@ -1,0 +1,21 @@
+name: Delete all files in Azure App Service
+
+on:
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: 'linkaarong'
+  AZURE_WEBAPP_SLOT_NAME: 'production'
+
+jobs:
+  delete-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Delete all files
+        uses: Azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          slot-name: ${{ env.AZURE_WEBAPP_SLOT_NAME }}
+          action: 'delete'
+          path: '/'
