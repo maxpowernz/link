@@ -37,17 +37,17 @@ jobs:
           pnpm run build
         working-directory: ${{ env.APP_PACKAGE_PATH }}
       
-      - name: Zip App
-        run: zip next.zip ./* .next .env -qr
-        working-directory: ${{ env.APP_PACKAGE_PATH }}
+      # - name: Zip App
+      #   run: zip next.zip ./* .next .env -qr
+      #   working-directory: ${{ env.APP_PACKAGE_PATH }}
         
 
 # skip uploading artifact if you don't need it
-      # - name: Upload artifact for deployment job
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: node-app
-      #     path: ./apps/web
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: node-app
+          path: ./apps/web
 
   # Can jump over deployment step if you don't need it
   # deploy:
