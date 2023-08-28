@@ -3,7 +3,7 @@ module.exports = {
       {
         name: "linkaaron2",
         script: "./node_modules/next/dist/bin/next",
-        args: "start",
+        args: "start -p " + (process.env.PORT || 3000),
         watch: false,
         autorestart: true,
       },
