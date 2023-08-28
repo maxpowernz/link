@@ -5,7 +5,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: linkaaron2
-  AZURE_WEBAPP_PACKAGE_PATH: './apps/web'
+  LINK_PATH: './apps/web'
   NODE_VERSION: '18.x'
 
 jobs:
@@ -31,13 +31,17 @@ jobs:
         run: |
           pnpm install
           pnpm build-link
-        working-directory: ./apps/web          
+        working-directory: ${{ env.LINK_PATH }}      
 
+      - name: Zip all files
+        run: zip next.zip ./* .next -qr
+        working-directory: ${{ env.LINK_PATH }}
+                   
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./apps/web
+          path: next.zip 
 
 
   deploy:
@@ -45,11 +49,6 @@ jobs:
       needs: build
           
       steps:
-        - name: Download artifact from build job
-          uses: actions/download-artifact@v3
-          with:
-            name: node-app
-
         - name: 'Deploy to Azure Web App'
           id: deploy-to-webapp
           uses: azure/webapps-deploy@v2
@@ -57,4 +56,7 @@ jobs:
             app-name: ${{ env.AZURE_WEBAPP_NAME }}
             slot-name: 'Production'
             publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-            package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+            package: next.zip
+        
+        - name: Delete zip file
+          run: rm next.zip
