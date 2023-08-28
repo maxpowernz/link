@@ -1,4 +1,4 @@
-name: Build and deploy 2
+name: Build and deploy 3
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: linkaaron2
   LINK_PATH: './apps/web'
-  NODE_VERSION: '18.17.0'
+  NODE_VERSION: '18.x'
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
           pnpm build-link    
 
       - name: Zip all files
-        run: zip next.zip ./apps/web* ./apps/web/.next -qr
+        run: zip next.zip ./apps/web/*.* ./apps/web/.next -qr
                    
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
