@@ -135,6 +135,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
 
+  packages/mypack: {}
+
   packages/tailwind-config:
     dependencies:
       daisyui:

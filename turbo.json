@@ -6,6 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
+    "build-link": {
+      "dependsOn": ["^build-link"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
     "lint": {},
     "check-types": {},
     "dev": {
