@@ -69,6 +69,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^4.33.0
         version: 4.33.0(react-dom@18.2.0)(react@18.2.0)
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
       next:
         specifier: latest
         version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
@@ -91,9 +94,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.13
         version: 10.4.13(postcss@8.4.21)
-      eslint-config-custom:
-        specifier: workspace:*
-        version: link:../../packages/eslint-config-custom
       postcss:
         specifier: ^8.4.21
         version: 8.4.21
@@ -227,9 +227,6 @@ importers:
       daisyui:
         specifier: ^2.51.5
         version: 2.51.5(autoprefixer@10.4.14)(postcss@8.4.21)
-      eslint-config-custom:
-        specifier: workspace:*
-        version: link:../eslint-config-custom
       fake-indexeddb:
         specifier: ^4.0.1
         version: 4.0.1
