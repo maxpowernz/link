@@ -33,8 +33,7 @@ jobs:
           pnpm build-link    
 
       - name: Zip all files
-        run: zip next.zip ./* .next -qr
-        working-directory: ${{ env.LINK_PATH }}
+        run: zip next.zip ./apps/web* ./apps/web/.next -qr
                    
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
