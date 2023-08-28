@@ -38,7 +38,7 @@ jobs:
         run: |
           pnpm install
           pnpm run build
-        working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        # working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       # - name: Upload artifact for deployment job
       #   uses: actions/upload-artifact@v3
@@ -59,11 +59,11 @@ jobs:
   #       with:
   #         name: node-app
 
-      # - name: 'Deploy to Azure Web App'
-      #   id: deploy-to-webapp
-      #   uses: azure/webapps-deploy@v2
-      #   with:
-      #     app-name: 'linkaarong'
-      #     slot-name: 'Production'
-      #     publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_49A1CB522EF24969946F6A5D7DBAC45D }}
-      #     package: .
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'linkaarong'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_49A1CB522EF24969946F6A5D7DBAC45D }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
