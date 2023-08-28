@@ -21,7 +21,7 @@ const CARD_CONTENT = [
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
-
+      {CARD_CONTENT.map((card) => <div key={card.title}>{card.title}</div>)}
     </div>
   );
 }
