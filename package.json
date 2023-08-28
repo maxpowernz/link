@@ -11,14 +11,7 @@
     "eslint": "latest",
     "eslint-config-custom": "workspace:*",
     "prettier": "^2.8.7",
-    "turbo": "^1.8.8"
+    "turbo": "latest"
   },
-  "packageManager": "pnpm@8.0.0",
-  "pnpm": {
-    "overrides": {
-      "trim@<0.0.3": ">=0.0.3",
-      "glob-parent@<5.1.2": ">=5.1.2",
-      "trim-newlines@<3.0.1": ">=3.0.1"
-    }
-  }
+  "packageManager": "pnpm@8.2.0"
 }
