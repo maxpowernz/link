@@ -18,5 +18,29 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: ${{ env.AZURE_WEBAPP_SLOT_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          action: 'delete'
-          path: '/'
+          action: 'clean'
+        #   path: '/'
+
+
+
+#     name: Clean files in Azure App Service
+
+# on:
+#   workflow_dispatch:
+
+# env:
+#   AZURE_WEBAPP_NAME: 'your-app-name'
+#   AZURE_WEBAPP_SLOT_NAME: 'production'
+
+# jobs:
+#   clean-files:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Clean files
+#         uses: Azure/webapps-deploy@v2
+#         with:
+#           app-name: ${{ env.AZURE_WEBAPP_NAME }}
+#           slot-name: ${{ env.AZURE_WEBAPP_SLOT_NAME }}
+#           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+#           action: 'clean'
