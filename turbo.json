@@ -4,11 +4,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
-    },
-    "build-link-app": {
-      "outputs": [".next/**", "!.next/cache/**"],
-      "dependsOn": ["^build-link-app"]
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {},
     "check-types": {},
