@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - linkaarong
+name: Build and deploy Link to Azure Web App
 
 on:
   workflow_dispatch:
@@ -22,7 +22,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: NODE_VERSION
+          node-version: ${{ env.NODE_VERSION }}
           
       - uses: pnpm/action-setup@v2
         name: Install pnpm
@@ -37,7 +37,7 @@ jobs:
         run: |
           pnpm install
           pnpm run build
-        working-directory: AZURE_WEBAPP_PACKAGE_PATH
+        working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: 'Deploy to Azure WebApp'
         uses: azure/webapps-deploy@v2
