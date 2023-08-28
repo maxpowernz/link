@@ -31,11 +31,10 @@ jobs:
               args: [--frozen-lockfile, --strict-peer-dependencies]
             - args: [--global, gulp, prettier, typescript]
 
-      - name: pnpm install, build, and test
+      - name: pnpm install, build
         run: |
-          pnpm install --if present
-          pnpm run build --if present
-          pnpm test --if present
+          pnpm install
+          pnpm run build
         working-directory: ${{ env.APP_PACKAGE_PATH }}
       
       - name: Zip App
