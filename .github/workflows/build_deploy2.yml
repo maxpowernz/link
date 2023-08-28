@@ -28,7 +28,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pnpm install --shamefully-hoist
+          pnpm install --shamefully-hoist --prod
 
       - name: Build
         run: pnpm build
