@@ -28,7 +28,8 @@ jobs:
 
       - name: Install & Build
         run: |
-            pnpm i --frozen-lockfile --prod=true
+            pnpm install -r
+            pnpm install -D @swc/cli @swc/core
             pnpm build-link       
 
       - name: Zip all files
