@@ -82,6 +82,9 @@ importers:
         specifier: ^3.2.4
         version: 3.3.0(postcss@8.4.21)
     devDependencies:
+      '@next/env':
+        specifier: ^11.1.2
+        version: 11.1.2
       '@testing-library/jest-dom':
         specifier: ^5.16.5
         version: 5.16.5
@@ -2107,6 +2110,10 @@ packages:
     dependencies:
       call-me-maybe: 1.0.2
       glob-to-regexp: 0.3.0
+
+  /@next/env@11.1.2:
+    resolution: {integrity: sha512-+fteyVdQ7C/OoulfcF6vd1Yk0FEli4453gr8kSFbU8sKseNSizYq6df5MKz/AjwLptsxrUeIkgBdAzbziyJ3mA==}
+    dev: true
 
   /@next/env@13.4.1:
     resolution: {integrity: sha512-eD6WCBMFjLFooLM19SIhSkWBHtaFrZFfg2Cxnyl3vS3DAdFRfnx5TY2RxlkuKXdIRCC0ySbtK9JXXt8qLCqzZg==}
