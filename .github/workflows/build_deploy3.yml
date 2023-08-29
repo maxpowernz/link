@@ -28,10 +28,10 @@ jobs:
 
       - name: Install & Build
         run: |
-            pnpm fetch
             pnpm install -r
             pnpm install -D @swc/cli @swc/core --filter -w
-            pnpm build-link       
+            pnpm build-link
+            pnpm fetch       
 
       - name: Zip all files
         working-directory: ./apps/web
