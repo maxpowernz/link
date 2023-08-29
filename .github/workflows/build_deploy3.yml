@@ -24,15 +24,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'pnpm'
+          cache: 'pnpm'  
+
+      # - name: Zip all files
+      #   run: zip next.zip ./apps/web/* ./apps/web/.next -qr
+
+      - name: Zip all files
+        run: zip next.zip ./apps/web/* -qr
 
       - name: Install Dependencies
         run: |
           pnpm install
-          pnpm build-link    
-
-      - name: Zip all files
-        run: zip next.zip ./apps/web/* ./apps/web/.next -qr
+          pnpm build-link  
                    
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -51,7 +54,6 @@ jobs:
           uses: actions/download-artifact@v2
           with:
             name: node-app
-            path: "./"
 
         - name: 'Deploy to Azure Web App'
           id: deploy-to-webapp
