@@ -27,14 +27,12 @@ jobs:
           cache: 'pnpm'  
 
       - name: Install & Build
-        working-directory: ./apps/web
         run: |
                pnpm install
                pnpm install -D @swc/cli @swc/core @swc/helpers
                pnpm build-link            
 
-      - name: Zip all files
-        working-directory: ./apps/web         
+      - name: Zip all files        
         run: zip next.zip ./* .next -qr
 
       - name: 'Deploy to Azure Web App'
@@ -44,7 +42,7 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ./apps/web/next.zip
+          package: next.zip
 
       - name: Delete zip file
         run: rm ./apps/web/next.zip
