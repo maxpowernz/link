@@ -35,7 +35,7 @@ jobs:
       #   run: zip next.zip ./apps/web/* ./apps/web/.next -qr
 
       - name: Zip all files
-        run: zip -r .../next.zip ./apps/web/* ./apps/web/.next
+        run: zip -r ../next.zip ./apps/web/* ./apps/web/.next
                    
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
