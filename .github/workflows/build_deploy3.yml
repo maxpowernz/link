@@ -33,16 +33,16 @@ jobs:
       #       pnpm build-link
       #     # pnpm fetch       
       #     #  pnpm install
+      - name: Zip all files
+        working-directory: ./apps/web
+        run: zip next.zip ./* .next -qr
+        
       - name: Build
         run: |
             pnpm install -r
             pnpm install -D @swc/cli @swc/core
             pnpm build-link
-        working-directory: ./apps/web    
 
-      - name: Zip all files
-        working-directory: ./apps/web
-        run: zip next.zip ./* .next -qr
       
       # - name: Download artifact
       #   uses: actions/download-artifact@v2
