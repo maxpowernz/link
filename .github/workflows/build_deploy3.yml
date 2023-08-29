@@ -19,6 +19,8 @@ jobs:
         name: Install pnpm
         with:
           version: 8
+          run_install: |
+            - recursive: false
               
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -28,8 +30,7 @@ jobs:
 
       - name: Build
         run: |
-              pnpm install
-              pnpm add @swc/core @swc/cli @swc/node @swc/helpers  
+              pnpm add @swc/helpers  
               pnpm build-link         
 
       - name: Zip files        
