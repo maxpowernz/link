@@ -32,7 +32,7 @@ jobs:
                pnpm build-link            
 
       - name: Zip files        
-        run: zip next.zip ./apps/web* .apps/.next ./package.json ./node_modules/turbo -qr
+        run: zip next.zip ./apps/web* .apps/.next ./package.json -qr
 
       - name: Install Turbo
         run: pnpm add turbo --save-dev --ignore-workspace-root-check
