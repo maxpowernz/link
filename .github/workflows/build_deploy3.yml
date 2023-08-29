@@ -28,7 +28,7 @@ jobs:
 
       - name: Install & Build
         run: |
-               pnpm install -r
+               pnpm install
                pnpm install -D @swc/cli @swc/core @swc/helpers
                pnpm build-link
         working-directory: ./apps/web               
