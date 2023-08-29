@@ -28,7 +28,7 @@ jobs:
 
       - name: Install & Build
         run: |
-            pnpm install -r
+            pnpm fetch
             pnpm install -D @swc/cli @swc/core --filter -w
             pnpm build-link       
 
