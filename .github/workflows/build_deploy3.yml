@@ -15,41 +15,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
           
-      # - uses: pnpm/action-setup@v2
-      #   name: Install pnpm
-      #   with:
-      #     version: 8
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
               
-      # - name: Install Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ env.NODE_VERSION }}
-      #     cache: 'pnpm'  
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'  
 
-      # - name: Install Dependencies
-      #   run: |
-      #       pnpm install
-      #       pnpm build-link       
-
-      # - name: Zip all files
-      #   run: zip next.zip ./apps/web/* ./apps/web/.next -qr
+      - name: Install Dependencies
+        run: |
+            pnpm install
+            pnpm build-link       
 
       - name: Zip all files
-        #run: zip -r next.zip ../apps/web/* ../apps/web/.next
         working-directory: ./apps/web
         run: zip next.zip ./* ./.next -qr
                    
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
-        with:
-          name: node-app
-          path: ./apps/web/next.zip
-
-      # - name: Download artifact from build job
-      #   uses: actions/download-artifact@v2
+      # - name: Upload artifact for deployment job
+      #   uses: actions/upload-artifact@v2
       #   with:
       #     name: node-app
-
+      #     path: ./apps/web/next.zip
 
   deploy:
       runs-on: ubuntu-latest
@@ -57,10 +47,10 @@ jobs:
           
       steps:
 
-        - name: Download artifact from build job
-          uses: actions/download-artifact@v2
-          with:
-            name: node-app
+        # - name: Download artifact from build job
+        #   uses: actions/download-artifact@v2
+        #   with:
+        #     name: node-app
 
         - name: 'Deploy to Azure Web App'
           id: deploy-to-webapp
