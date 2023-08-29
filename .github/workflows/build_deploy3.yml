@@ -34,6 +34,9 @@ jobs:
       - name: Zip files        
         run: zip next.zip ./apps/web* .apps/.next ./package.json ./node_modules/turbo -qr
 
+      - name: Install Turbo
+        run: pnpm add turbo --save-dev --ignore-workspace-root-check
+
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
