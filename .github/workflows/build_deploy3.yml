@@ -32,7 +32,7 @@ jobs:
               pnpm build-link         
 
       - name: Zip files        
-        run: zip next.zip ./apps/web* .apps/.next ./package.json -qr -x ./apps/docs
+        run: zip next.zip ./apps/web* .apps/.next ./ecosystem.config.js -qr -x ./apps/docs*
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
