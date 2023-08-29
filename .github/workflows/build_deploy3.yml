@@ -40,8 +40,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: next
-          path: ./apps/web/next.zip
+          name: next.zip
+          path: ./apps/web
  
       # - name: Build
       #   run: |
@@ -55,7 +55,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           path: ./apps/web
-          name: new.zip
+          name: next.zip
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -64,7 +64,7 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: new.zip
+          package: next.zip
 
       # - name: Delete zip file
       #   run: rm ./apps/web/next.zip
