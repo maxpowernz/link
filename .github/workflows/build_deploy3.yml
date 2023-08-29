@@ -30,7 +30,7 @@ jobs:
 
       - name: Install & Build
         run: |
-            pnpm install
+            pnpm install --shamefully-hoist
             pnpm build-link       
 
       - name: Zip all files
