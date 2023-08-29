@@ -1,6 +1,6 @@
 module.exports = {
  reactStrictMode: true,
-//  transpilePackages: ['@fmg/ui'],
+ transpilePackages: ['@fmg/ui'],
  webpack(config) {
    config.experiments = {
      ...config.experiments,
