@@ -29,33 +29,13 @@ jobs:
       - name: Install & Build
         run: |
                pnpm install -r
-               pnpm install -D @swc/cli @swc/core
+               pnpm install -D @swc/cli @swc/core @swc/helpers
                pnpm build-link
         working-directory: ./apps/web               
 
       - name: Zip all files
         run: zip next.zip ./* .next -qr
-        working-directory: ./apps/web 
-      
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: next.zip
-          path: ./apps/web
- 
-      # - name: Build
-      #   run: |
-      #       pnpm install -r
-      #       pnpm install -D @swc/cli @swc/core
-      #       pnpm build-link
-      #   working-directory: ./            
-
-      
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          path: ./apps/web
-          name: next.zip
+        working-directory: ./apps/web         
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -64,7 +44,7 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: next.zip
+          package: ./apps/web/next.zip
 
-      # - name: Delete zip file
-      #   run: rm ./apps/web/next.zip
+      - name: Delete zip file
+        run: rm ./apps/web/next.zip
