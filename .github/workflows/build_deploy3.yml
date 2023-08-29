@@ -5,7 +5,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: linkaaron2
-  NODE_VERSION: 18.17.0
+  NODE_VERSION: '18.x'
 
 jobs:
   build:
@@ -35,7 +35,12 @@ jobs:
 
       - name: Zip all files
         working-directory: ./apps/web
-        run: zip next.zip ./* ./.next .env -qr
+        run: zip next.zip ./* .next .env -qr
+      
+      # - name: Download artifact
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     path: ./apps/web
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
