@@ -35,7 +35,7 @@ jobs:
 
       - name: Zip all files
         working-directory: ./apps/web
-        run: zip next.zip ./* .next .env -qr
+        run: zip next.zip ./* .next -qr
       
       # - name: Download artifact
       #   uses: actions/download-artifact@v2
