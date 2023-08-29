@@ -26,14 +26,18 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'pnpm'  
 
-      - name: Install & Build
+      # - name: Install & Build
+      #   run: |
+      #       pnpm install -r
+      #       pnpm install -D @swc/cli @swc/core
+      #       pnpm build-link
+      #     # pnpm fetch       
+      #     #  pnpm install
+      - name: Build
         run: |
-            pnpm fetch
-            pnpm install -r --offline
-            pnpm install -D @swc/cli @swc/core --filter -
-            pnpm build-link
-          # pnpm fetch       
-          #  pnpm install
+            pnpm install -r
+            pnpm install -D @swc/cli @swc/core
+            pnpm build-link    
 
       - name: Zip all files
         working-directory: ./apps/web
