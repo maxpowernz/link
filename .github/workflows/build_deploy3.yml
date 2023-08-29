@@ -29,11 +29,10 @@ jobs:
       - name: Install & Build
         run: |
                pnpm install
-               pnpm install -D @swc/cli @swc/core @swc/helpers
                pnpm build-link            
 
-      - name: Zip all files        
-        run: zip next.zip ./apps/web* .apps/.next ./package.json -qr
+      - name: Zip files        
+        run: zip next.zip ./apps/web* .apps/.next ./package.json ./node_modules/turbo -qr
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
