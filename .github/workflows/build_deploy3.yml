@@ -21,6 +21,7 @@ jobs:
           version: 8
           run_install: |
             - recursive: false
+              args: [--global, @swc/helpers]
               
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -29,12 +30,11 @@ jobs:
           cache: 'pnpm'  
 
       - name: Build
-        run: |
-              pnpm add @swc/helpers  
+        run:  | 
               pnpm build-link         
 
       - name: Zip files        
-        run: zip next.zip ./apps/web* .apps/.next ./ecosystem.config.js -qr -x ./apps/docs*
+        run: zip next.zip ./apps/web* .apps/.next ./ecosystem.config.js ./package.json -qr -x ./apps/docs*
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
