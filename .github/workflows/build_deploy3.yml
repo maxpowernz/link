@@ -32,13 +32,13 @@ jobs:
           pnpm build-link    
 
       - name: Zip all files
-        run: zip next.zip ./apps/web/*.* ./apps/web/.next -qr
+        run: zip next.zip ./apps/web/* ./apps/web/.next -qr
                    
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: "."
+          path: "../../next.zip"
 
 
   deploy:
@@ -47,11 +47,11 @@ jobs:
           
       steps:
 
-        - name: Download artifact from build job
-          uses: actions/download-artifact@v2
-          with:
-            name: node-app
-            path: "./"
+        # - name: Download artifact from build job
+        #   uses: actions/download-artifact@v2
+        #   with:
+        #     name: node-app
+        #     path: "./"
 
         - name: 'Deploy to Azure Web App'
           id: deploy-to-webapp
