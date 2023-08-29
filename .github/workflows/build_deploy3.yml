@@ -33,7 +33,7 @@ jobs:
                pnpm build-link            
 
       - name: Zip all files        
-        run: zip next.zip ./* .next -qr
+        run: zip next.zip ./apps/web* .apps/.next -qr
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -45,4 +45,4 @@ jobs:
           package: next.zip
 
       - name: Delete zip file
-        run: rm ./apps/web/next.zip
+        run: rm next.zip
