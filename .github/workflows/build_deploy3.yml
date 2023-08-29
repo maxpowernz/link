@@ -21,7 +21,7 @@ jobs:
           version: 8
           run_install: |
             - recursive: false
-              args: [--global, @swc/helpers]
+            - args: [--global, @swc/helpers]
               
       - name: Install Node.js
         uses: actions/setup-node@v3
