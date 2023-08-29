@@ -37,7 +37,8 @@ jobs:
         run: |
             pnpm install -r
             pnpm install -D @swc/cli @swc/core
-            pnpm build-link    
+            pnpm build-link
+        working-directory: ./apps/web    
 
       - name: Zip all files
         working-directory: ./apps/web
