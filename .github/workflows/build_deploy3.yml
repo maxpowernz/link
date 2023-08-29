@@ -29,13 +29,11 @@ jobs:
       - name: Install & Build
         run: |
                pnpm install
-               pnpm build-link            
+               pnpm build-link
+               pnpm add turbo --save-dev --ignore-workspace-root-check            
 
       - name: Zip files        
-        run: zip next.zip ./apps/web* .apps/.next ./package.json -qr
-
-      - name: Install Turbo
-        run: pnpm add turbo --save-dev --ignore-workspace-root-check
+        run: zip next.zip ./apps/web* .apps/.next ./package.json, ./node_modules/turbo -qr
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
