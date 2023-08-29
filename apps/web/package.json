@@ -9,27 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fmg/ui": "workspace:*",
     "@tanstack/react-query": "^4.33.0",
-    "next": "13.4.1",
+    "next": "13.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.2.4",
-    "@fmg/ui": "workspace:*"
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*",
-    "@next/env": "^11.1.2",
-    "eslint": "latest",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@types/jest": "^29.5.0",
     "@types/node": "^18.11.17",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@types/jest": "^29.5.0",
     "@types/react-test-renderer": "^18.0.0",
     "@types/testing-library__jest-dom": "^5.14.5",
+    "autoprefixer": "^10.4.13",
+    "eslint": "latest",
+    "eslint-config-custom": "workspace:*",
+    "postcss": "^8.4.21",
+    "tsconfig": "workspace:*",
     "typescript": "^5.2.2",
     "vitest": "0.34.3"
   }

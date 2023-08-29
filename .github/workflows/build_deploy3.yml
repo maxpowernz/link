@@ -30,7 +30,7 @@ jobs:
 
       - name: Install & Build
         run: |
-            pnpm install --shamefully-hoist
+            pnpm i --frozen-lockfile --prod=false
             pnpm build-link       
 
       - name: Zip all files
