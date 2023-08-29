@@ -30,8 +30,7 @@ jobs:
         run: |
                pnpm install
                pnpm install -D @swc/cli @swc/core @swc/helpers
-               pnpm build-link
-        working-directory: ./apps/web               
+               pnpm build-link            
 
       - name: Zip all files
         run: zip next.zip ./* .next -qr
