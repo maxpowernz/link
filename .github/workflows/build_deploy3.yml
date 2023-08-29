@@ -21,7 +21,6 @@ jobs:
           version: 8
           run_install: |
             - recursive: true
-            - args: [--global, @swc/helpers]
               
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -31,7 +30,9 @@ jobs:
 
       - name: Build
         run:  | 
-              pnpm build-link         
+              pnpm add @swc/helpers
+              pnpm build-link
+        working-directory: ./apps/web                       
 
       - name: Zip files        
         run: zip next.zip ./apps/web* .apps/.next ./ecosystem.config.js ./package.json -qr -x ./apps/docs*
