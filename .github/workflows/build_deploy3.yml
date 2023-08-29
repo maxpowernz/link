@@ -30,7 +30,7 @@ jobs:
       #   run: zip next.zip ./apps/web/* ./apps/web/.next -qr
 
       - name: Zip all files
-        run: zip next.zip ./apps/web/* -qr
+        run: zip next.zip ./apps/web/* -qrj
 
       - name: Install Dependencies
         run: |
